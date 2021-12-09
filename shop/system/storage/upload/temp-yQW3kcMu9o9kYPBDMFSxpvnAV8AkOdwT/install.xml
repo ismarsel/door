@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<code>footerinf</code>
+	<name>Footer Information</name>
+	<version>1.0</version>
+	<author>WebDesign Master</author>
+	<link>http://webdesign-master.ru</link>
+	<file path="catalog/controller/common/footer.php">
+		<operation>
+			<search><![CDATA[
+				$this->load->language('common/footer');
+			]]></search>
+			<add position="before"><![CDATA[
+				
+			]]></add>
+		</operation>
+	</file>  
+</modification>

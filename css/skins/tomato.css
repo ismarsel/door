@@ -1,0 +1,56 @@
+body {
+  color: #222;
+  letter-spacing: 1px; }
+
+a {
+  color: #990000; }
+
+p,
+h3 {
+  color: #f2f2f2; }
+
+h4 {
+  color: #222; }
+
+.color_element {
+  color: #990000; }
+
+.color_bg {
+  background-color: #990000; }
+
+.color_border {
+  border-color: #990000; }
+
+.logo_container:first-letter {
+  color: #990000; }
+
+.logo_container {
+  color: #1a2a6e; }
+
+.bg_light {
+  background-color: #f2f2f2; }
+
+.about p,
+.stuff p,
+.comment p {
+  color: #222; }
+
+.personal .pers {
+  background-color: #e5e5e5; }
+
+.comment_button a {
+  color: #f2f2f2;
+  background-color: #990000;
+  box-shadow: 0 0 0 3px #e5e5e5; }
+
+button {
+  color: #f2f2f2;
+  background-color: #990000; }
+
+.contacts_form {
+  background-color: #e5e5e5; }
+
+footer {
+  background-color: #e5e5e5; }
+
+/*# sourceMappingURL=tomato.css.map */

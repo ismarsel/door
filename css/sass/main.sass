@@ -1,0 +1,510 @@
+@import "bourbon/bourbon"
+@import "../../libs/owlcarousel/assets/owl.carousel.min.sass"
+
+body
+	font-family: "Montserrat", "Raleway", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+
+.hidden
+	display: block
+
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+.logo_container
+	float: left
+	height: 60px
+	width: 60px
+	z-index: 1
+	position: relative
+	font-family: "Montserrat-BlackItalic"
+	font-size: 28px
+	// font-weight: bold
+	text-transform: uppercase
+	span
+		font-size: 36px
+
+.logo_container:first-letter
+	font-size: 40px
+
+.top_phone 
+	display: inline-block
+	position: relative
+	z-index: 1
+	float: right
+	height: 60px
+	right: 150px
+	margin-top: 10px
+	margin-right: 20px
+	font-size: 1.8em
+	a 
+		color: #fafafa
+
+section,
+.main_head
+	position: relative
+
+section
+	padding: 60px 0 50px
+	h4
+		text-align: center
+		font-size: 24px
+		text-transform: uppercase
+		margin: 0 0 15px
+		letter-spacing: 1px
+	h5
+		font-size: 1.1em
+
+
+
+.main_head
+	min-height: 480px
+	padding-top: 20px
+.toggle_mnu
+	width: 60px
+	height: 60px
+	position: fixed
+	z-index: 100
+	border: none
+	right: 20px
+	top: 20px
+	span
+		display: block
+
+
+$w: 28px
+$h: 3px
+
+.sandwich 
+	width: $w
+	height: $w
+	position: absolute
+	top: 8px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+
+.sw-topper
+	position: relative
+	top: 0
+	width: $w 
+	height: $h
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	display: block
+.sw-bottom
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 2.2
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+.sw-footer
+	position: relative
+	width: $w
+	height: $h
+	top: $h * 4.5
+	background: rgb(255, 255, 255)
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+.sandwich.active
+	.sw-topper
+		top: 9px
+		transform: rotate(-45deg)
+	.sw-bottom
+		top: 6px
+		transform: rotate(45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.top_mnu
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.85)
+	z-index: 50
+	right: 0
+	top: 0
+	display: none
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 180px
+		text-align: center
+		+animation-duration(.01s)
+		li
+			&:nth-child(1) a
+				+animation-delay(0)
+			&:nth-child(2) a
+				+animation-delay(.1s)
+			&:nth-child(3) a
+				+animation-delay(.2s)
+			&:nth-child(4) a
+				+animation-delay(.3s)
+		a
+			color: #fff
+			display: block
+			text-transform: uppercase
+			font-size: 12px
+			opacity: 0
+			position: relative
+			height: 60px
+			outline: none
+			span
+				display: block
+				position: relative
+				top: -40px
+				left: 0
+				height: 100%
+				+transition(all 0.5s ease)
+				&:hover
+					background-color: rgba(255,255,255,.08)
+
+.top_wrapper
+	display: table
+	// width: 100%
+	height: 100%
+	position: absolute
+	top: 25%
+	left: 5%
+	z-index: 10
+	font-family: "Montserrat-ExtraLight"
+	text-transform: uppercase
+
+	.top_descr
+		display: table-row
+		.top_centered
+			display: table-cell
+			text-align: center
+			// vertical-align: middle
+	.top_text
+		display: inline-block
+		+transition(all 1s ease)
+		p
+			margin: 0
+			// text-transform: uppercase
+			+animation-delay(1s)
+			// font-family: "Montserrat-ExtraLight"
+			font-size: 1.5em
+		h2
+			display: inline-block
+			padding: 10px
+			color: #fff
+			// border: 8px solid #fff
+			// text-transform: uppercase
+			// font-family: "Montserrat-ExtraLight"
+			font-size: 2.7em
+			// background-color: rgba(0,0,0,.1)
+			margin-left: 20px
+			margin-bottom: 0
+			// margin-right: 20px
+			+animation-delay(.5s)
+		h3
+			font-size: 1.8em
+			padding-top: 5px
+			text-align: center
+			// text-transform: uppercase
+			margin-top: 0
+			margin-bottom: 35px
+			+animation-delay(1s)
+
+.toggle_mnu
+	background-color: #000
+
+.cards 
+	text-align: center
+	.card
+		width: 200px
+		display: inline-block
+		margin: 40px 10px
+		vertical-align: top
+		.card_icon
+			width: 100px
+			height: 100px
+			display: inline-block
+			img 
+				width: 90px
+		.card_icon-text
+			font-family: "Montserrat-Light"
+			color: #000
+			letter-spacing: 1px
+			h5
+				font-weight: thin
+				font-size: 1.1em
+				margin-bottom: 15px
+			p
+				color: #000
+			span 
+				text-transform: uppercase
+
+.goods
+	position: relative
+	min-height: 900px
+	// padding-top: 20px
+	.goods_wrap
+		position: relative
+		top: 160px
+		height: 100%
+		z-index: 10
+		text-align: center
+		perspective: 600px
+		.goods_item
+			&__on
+				opacity: 1
+			&__off
+				transform: rotateY(100deg)
+				opacity: 0
+			transition: all .8s ease
+			display: inline-block
+			position: relative
+			width: 220px
+			height: 220px			
+			margin: 15px
+			background-color: #fafafa
+			box-shadow: inset 0em -11em rgba(0, 0, 0, 0.4)
+			border-radius: 50%
+			vertical-align: middle
+			h2
+				text-transform: uppercase
+				font-family: "montserrat-light"
+				&:first-letter
+					color: #990000
+				a 
+					color: #1a2a6e
+					// border-bottom: 2px solid #1a2a6e
+					text-decoration: underline
+			.goods_item_card__icon
+				padding-top: 10px
+			p,
+			h3
+				margin: 0
+			span 
+				font-family: "Montserrat-Bold"
+				font-size: 3em
+				color: #fafafa
+
+.section_header
+	position: relative
+	text-align: center
+	z-index: 2
+	padding: 40px 0
+
+.about
+	.about_img 
+		background-image: url("../img/about_.jpg")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		height: 400px
+	.about_descr
+		padding-top: 20px
+		letter-spacing: 1.5px
+		text-indent: 20px
+		line-height: 24px
+		div
+			text-transform: uppercase
+			font-family: "Montserrat-ExtraLight"
+			padding: 5px
+			letter-spacing: 1.5px
+
+.personal
+	text-align: center
+	.pers
+		width: 260px
+		display: inline-block
+		margin: 0 15px
+		padding: 60px 30px
+		a
+			font-size: 1.1em
+		.pers_photo
+			display: inline-block
+			height: 150px
+			width: 150px
+			overflow: hidden
+			border-radius: 50%
+			line-height: 0
+			box-shadow: 0 0 0 4px #d6d6d6
+			img
+				width: 100%
+
+.slider
+	margin-top: 20px
+	.slide
+		text-align: center
+		.slider_img__wrap
+			display: inline-block
+			height: 150px
+			width: 150px
+			overflow: hidden
+			border-radius: 50%
+			line-height: 0
+			box-shadow: 0 0 0 4px #d6d6d6
+			margin: 4px
+			img
+				width: 100%
+.owl-carousel
+	position: relative
+	.owl-dots
+		text-align: center
+		.owl-dot
+			display: inline-block
+			border-radius: 50%
+			background-color: #d6d6d6
+			color: #000
+			width: 15px
+			height: 15px
+			margin: 0 7px
+			border: none
+			&.active
+				background-color: #990000
+	.owl-nav
+		position: absolute
+		width: 100%
+		top: 15px
+		font-size: 4em
+		> button
+				opacity: .3
+				&:hover
+					opacity: 1
+		.owl-next
+			float: right
+
+.comment_button
+	margin: 50px 20px
+	text-align: center
+	a 
+		padding: 20px
+		text-transform: uppercase
+
+.modal-container 
+	width: 500px
+	height: 570px
+	padding: 0
+	margin: 20px 0
+	border-radius: .3em
+	box-shadow: 0 0.1em 0.4em rgba(0,0,0,.3)
+	.modal-title 
+		padding: 1.5em
+		font-family: 'Montserrat-Bold', 'Raleway', Helvetica, Arial,
+	.modal-body 
+		max-height: calc(100vh - 230px)
+		min-height: 50px
+		padding: 0 1.5em 1.5em 1.5em
+		overflow-y: auto
+		p:first-child 
+			margin-top: 0
+
+.main_form
+	button
+		border: none
+		line-height: 40px
+		padding: 0 25px
+		font-size: 13px
+		text-transform: uppercase
+		font-weight: 600
+		margin-top: 15px
+		float: left
+.form-group
+	display: block
+	margin-bottom: 20px
+	.color_element
+		font-size: 18px
+	.text-danger
+		font-size: 11px
+		margin-top: 5px
+		display: block
+		ul,
+		li
+			margin: 0
+			padding: 0
+			list-style-type: none
+	input,
+	textarea
+		display: block
+		width: 100%
+		border: 1px solid #ccc
+		margin-top: 5px
+		line-height: 40px
+		text-indent: 12px
+		font-size: 12px
+		background-color: transparent
+
+.partners_icons
+	text-align: center
+	> div
+			display: inline-block
+			width: 200px
+			height: 90px
+			margin: 0 10px
+			img 
+				width: 100%
+
+.contact_box
+	margin-bottom: 30px
+	color: #162a36
+	.contacts_icon
+		display: inline-block
+		width: 40px
+		height: 40px
+		font-size: 1.5em
+	a 
+		text-align: center
+		padding-left: 10px
+		font-size: 1.1em
+		color: #162a36
+
+.contacts_form
+	width: 90%
+	height: 100%
+	border-radius: 1em
+	form 
+		padding: 0.7em 1.4em 1px
+		z-index: 2
+
